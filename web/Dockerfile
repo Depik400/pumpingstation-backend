@@ -7,6 +7,4 @@ RUN docker-php-ext-install \
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-COPY ./apache-config/apache2.conf /etc/apache2/apache2.conf
-
 RUN apt update && apt install zip unzip
