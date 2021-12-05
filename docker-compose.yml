@@ -5,6 +5,7 @@ services:
     build: ./web
     environment:
       - APACHE_RUN_USER=#1000
+      - APACHE_RUN_GROUP=#1000
     volumes:
       - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
     ports:
