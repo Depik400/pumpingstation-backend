@@ -17,7 +17,7 @@ class Periods extends Model
 
     public static function createPeriod($date) {
         if(!$date) {
-            $timestamp = date('m-d-Y H:i:s', time());
+            $timestamp = date('Y-m-d H:i:s', time());
             $begin = new \DateTime($timestamp);
             $end = new \DateTime($timestamp);
         }else{
@@ -41,7 +41,7 @@ class Periods extends Model
     }
 
     public static function getFirstDayOfThisMonth() {
-        $timestamp = date('m-d-Y H:i:s',time());
+        $timestamp = date('Y-m-d H:i:s',time());
         $begin = new \DateTime($timestamp);
         $begin->modify('first day of this month');
         $begin->setTime(0,0,0);
